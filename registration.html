@@ -3,121 +3,275 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="https://qa.thamelremit.lftechnology.com/" />
-<title>Landingpage-thamel</title>
+<link rel="selenium.base" href="http://qa.remit.lftechnology.com/" />
+<title>remit-registration</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">Landingpage-thamel</td></tr>
+<tr><td rowspan="1" colspan="3">remit-registration</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
 	<td>/</td>
 	<td></td>
 </tr>
-<!--Header-->
+<!--Step 1-->
 <tr>
-	<td>verifyText</td>
-	<td>link=Fees</td>
-	<td>Fees</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>link=exact:Why ThamelRemit?</td>
-	<td>exact:Why ThamelRemit?</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>link=FAQ</td>
-	<td>FAQ</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>link=Log In</td>
-	<td>Log In</td>
-</tr>
-<tr>
-	<td>verifyText</td>
+	<td>clickAndWait</td>
 	<td>link=Sign Up</td>
-	<td>Sign Up</td>
-</tr>
-<!--Body-->
-<tr>
-	<td>verifyText</td>
-	<td>css=h1</td>
-	<td>Welcome to an all-newThamelRemit.com</td>
+	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>css=big</td>
-	<td>The goal of our updated website are to enhance the usability, make it more compliant, use the latest technology and provide higher level of security to our customers.<br />We thank you all for your continuous support!</td>
+	<td>type</td>
+	<td>id=firstName</td>
+	<td>Hoot</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>css=p</td>
-	<td>Please enter amount to calculate</td>
+	<td>type</td>
+	<td>id=lastName</td>
+	<td>User</td>
+</tr>
+<!--Change Email Address-->
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>ypradhan+xi@lftechnology.com</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>css=h2.limey &gt; small</td>
-	<td>Guaranteed Exchange Rate</td>
+	<td>type</td>
+	<td>id=confirmUsername</td>
+	<td>ypradhan+xi@lftechnology.com</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>css=span.details-label</td>
-	<td>Transfer Amount</td>
+	<td>type</td>
+	<td>id=mobilePhone</td>
+	<td>(541) 754-3010</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='calc_holder']/form/div[4]/p[2]/span</td>
-	<td>Transfer Fee</td>
+	<td>type</td>
+	<td>id=password</td>
+	<td>Remit123</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='calc_holder']/form/div[4]/p[3]/span</td>
-	<td>Total Amount</td>
+	<td>click</td>
+	<td>name=agreeTerms</td>
+	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='calc_holder']/form/div[4]/p[4]/span</td>
-	<td>Beneficiary Premium</td>
+	<td>clickAndWait</td>
+	<td>id=create</td>
+	<td></td>
+</tr>
+<!--Step 2-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//input[@name='gender'])[2]</td>
+	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//div[@id='calc_holder']/form/div[4]/p[5]/span</td>
-	<td>Beneficiary Amount</td>
-</tr>
-<!--Footer-->
-<tr>
-	<td>verifyText</td>
-	<td>link=Home</td>
-	<td>Home</td>
+	<td>click</td>
+	<td>xpath=(//input[@name='gender'])[2]</td>
+	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>link=Compliance</td>
-	<td>Compliance</td>
+	<td>select</td>
+	<td>id=dateOfBirth_day</td>
+	<td>label=1</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>link=Privacy</td>
-	<td>Privacy</td>
+	<td>select</td>
+	<td>id=dateOfBirth_month</td>
+	<td>label=March</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>link=Terms of Use</td>
-	<td>Terms of Use</td>
+	<td>select</td>
+	<td>id=dateOfBirth_year</td>
+	<td>label=1999</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>link=Facebook</td>
-	<td>Facebook</td>
+	<td>type</td>
+	<td>id=ssn</td>
+	<td>999790001</td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>link=Twitter</td>
-	<td>Twitter</td>
+	<td>type</td>
+	<td>id=confirmSSN</td>
+	<td>999790001</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=addressLine1</td>
+	<td>ATTN: ACH ORPERATIONS 1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>Test City </td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=state</td>
+	<td>label=Alabama</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=zipcode</td>
+	<td>35007</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submitinfo</td>
+	<td></td>
+</tr>
+<!--Step 3-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=firstName</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=firstName</td>
+	<td>Does</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=lastName</td>
+	<td>Doe</td>
+</tr>
+<!--Insert different ph number untill duplicate beneficiary can be created-->
+<tr>
+	<td>type</td>
+	<td>id=mobilePhone</td>
+	<td>javascript{&quot;4177777549&quot; + Math.floor(Math.random()*1111)}</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=bankName</td>
+	<td>label=regexp:AGRICULTURAL\sDEVELOPMENT BANK\sLTD</td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=swiftCode</td>
+	<td>ADBLNPKA</td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=swiftCode</td>
+	<td>ADBLNPKA</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=bankBranch</td>
+	<td>ktm</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=accountNumber</td>
+	<td>122233</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountType</td>
+	<td>label=Current</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=addressLine1</td>
+	<td>Test Address #1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=city</td>
+	<td>City</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=province</td>
+	<td>Bagmati</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=bankBranch</td>
+	<td>label=Sbr. Taplejung</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submitinfo</td>
+	<td></td>
+</tr>
+<!--Step 4-->
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=routingNumber</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=routingNumber</td>
+	<td>026009593</td>
+</tr>
+<tr>
+	<td>fireEvent</td>
+	<td>id=routingNumber</td>
+	<td>blur</td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=bankName</td>
+	<td>BANK OF AMERICA N.A.</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=accountNumber</td>
+	<td>122233</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=repeatAccountNumber</td>
+	<td>122233</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=createBankAccount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=dashboard</td>
+	<td>dashboard</td>
+</tr>
+<!--Security Questions-->
+<tr>
+	<td>select</td>
+	<td>id=questionOne</td>
+	<td>label=What is the name of your first pet?</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>500</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=answerOne</td>
+	<td>pet</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=answerTwo</td>
+	<td>ktm</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submitinfo</td>
+	<td></td>
 </tr>
 </tbody></table>
 </body>
